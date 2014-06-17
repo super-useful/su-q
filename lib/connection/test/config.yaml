@@ -1,0 +1,17 @@
+connection:
+  port: 1234
+  server: 127.0.0.1
+access:
+  read:
+    - aggregate
+    - count
+    - distinct
+    - find
+    - findOne
+    - group
+    - geoNear
+    - geoHaystackSearch
+    - mapReduce
+  update:
+    - findAndModify
+    - update

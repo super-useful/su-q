@@ -1,0 +1,33 @@
+dbs:
+  -
+    type: test
+    connection:
+      name: accounting
+    collections:
+      - bills
+      - customers
+    access:
+      create: false
+      read: true
+      update:
+        customers:
+          profile: true
+      destroy: false
+  -
+    type: test
+    connection:
+      port: 7890
+      server: localhost
+      name: random
+    collections:
+      - handsome
+      - boy
+      - modelling
+      - school
+    access:
+      create: false
+      read: true
+      update:
+        customers:
+          profile: true
+      destroy: false

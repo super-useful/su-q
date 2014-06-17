@@ -1,0 +1,18 @@
+dbs:
+  -
+    type: mongodb
+    connection:
+      name: suq_test
+      port: 27017
+      server: 127.0.0.1
+    collections:
+      - bills
+      - customers
+    access:
+      admin: false
+      create: false
+      read: true
+      update:
+        customers:
+          profile: true
+      destroy: false

@@ -1,0 +1,24 @@
+connection:
+  port: 27017
+  server: 127.0.0.1
+access:
+  admin:
+    - drop
+  create:
+    - insert
+  read:
+    - aggregate
+    - count
+    - distinct
+    - find
+    - findOne
+    - group
+    - geoNear
+    - geoHaystackSearch
+    - mapReduce
+  update:
+    - findAndModify
+    - update
+  destroy:
+    - findAndRemove
+    - remove
