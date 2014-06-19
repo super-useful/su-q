@@ -31,8 +31,15 @@
   "author": {
     "Simon Jefford": "si@ibrokethat.com",
     "Christos Constandinou": "constantology@gmail.com"
-    },
-  "license": "yo mumma",
+  },
+  "license":[ {
+    "type": "MIT",
+    "url": "https://raw.github.com/super-useful/su-apiserver/master/LICENSE"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:super-useful/su-q.git"
+  },
   "scripts": {
     "test": "node --harmony --harmony_typeof ./node_modules/mocha/bin/_mocha --colors --recursive --ui tdd --reporter spec ./test --NODE_ENV=test"
   },
