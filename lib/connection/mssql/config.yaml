@@ -1,0 +1,22 @@
+access:
+  admin:
+    - drop
+  create:
+    - insert
+  read:
+    - aggregate
+    - count
+    - distinct
+    - find
+    - findOne
+    - group
+    - geoNear
+    - geoHaystackSearch
+    - mapReduce
+    - query
+  update:
+    - findAndModify
+    - update
+  destroy:
+    - findAndRemove
+    - remove

@@ -14,8 +14,11 @@
     "require-all": "x",
     "super-func": "x",
     "super-iter": "x",
+    "mssql": "0.5.4",
     "through": "x",
+    "thunkify": "x",
     "useful-copy": "x",
+    "useful-value": "x",
     "yaml": "x"
   },
   "devDependencies": {
@@ -41,7 +44,8 @@
     "url": "git@github.com:super-useful/su-q.git"
   },
   "scripts": {
-    "test": "node --harmony --harmony_typeof ./node_modules/mocha/bin/_mocha --colors --recursive --ui tdd --reporter spec ./test --NODE_ENV=test"
+    "test": "node --harmony --harmony_typeof ./node_modules/mocha/bin/_mocha --colors --recursive --ui tdd --reporter spec ./test --NODE_ENV=test",
+    "example": "export DB_PASSWORD='hydr0gen' && node --harmony --harmony_typeof example.js"
   },
   "engines": {
     "node": "0.11.x"
