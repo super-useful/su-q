@@ -16,6 +16,7 @@ access:
     - geoNear
     - geoHaystackSearch
     - mapReduce
+    - query
   update:
     - findAndModify
     - update
