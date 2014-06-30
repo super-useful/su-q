@@ -10,7 +10,7 @@
     "config-file": "x",
     "event-stream": "x",
     "js-yaml": "x",
-    "moment": "x",
+    "moment-timezone": "x",
     "require-all": "x",
     "super-func": "x",
     "super-iter": "x",
@@ -45,7 +45,7 @@
   },
   "scripts": {
     "test": "node --harmony --harmony_typeof ./node_modules/mocha/bin/_mocha --colors --recursive --ui tdd --reporter spec ./test --NODE_ENV=test",
-    "example": "export DB_PASSWORD='hydr0gen' && node --harmony --harmony_typeof example.js"
+    "example": "export DB_PASSWORD='PASSWORD_YOU_SHOULD_KNOW' && node --harmony --harmony_typeof example.js"
   },
   "engines": {
     "node": "0.11.x"
