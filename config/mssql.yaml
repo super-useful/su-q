@@ -1,0 +1,33 @@
+dbs:
+  -
+    type: mssql
+    connection:
+      alias: ser
+      name: BGR_SER_REPORTING_JUNE22
+      PASSWORD_ENVVAR: DB_PASSWORD
+      server: "193.164.125.58"
+      user: sa
+    collections:
+      daily:
+        name: "dbo.skinnyGetDailyConsumption"
+        schema:
+          accountNumber:
+            type: "VarChar"
+            value: "MAX"
+          division:
+            type: "VarChar"
+            value: "MAX"
+          fromDate: "Date"
+          toDate: "Date"
+      hourly:
+        name: "dbo.skinnyGetHourlyConsumption"
+        schema:
+          accountNumber:
+            type: "VarChar"
+            value: "MAX"
+          division:
+            type: "VarChar"
+            value: "MAX"
+          date: "Date"
+    access:
+      read: true

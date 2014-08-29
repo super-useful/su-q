@@ -1,0 +1,14 @@
+dbs:
+  -
+    type: postgres
+    connection:
+      alias: nipple
+      name: ubuntu
+      pwd: ubuntu
+      user: ubuntu
+    collections:
+      data_range:
+        name: "me.getpremiseranges"
+        query: "SELECT * FROM {__name__}({premise_id});"
+    access:
+      read: true
