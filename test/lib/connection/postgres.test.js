@@ -52,10 +52,10 @@ suite( 'suq.connection.postgres', function() {
 
 				expect( res ).to.deep.equal( [ {
 					account_id: '850042461346',
-    				fuelttype: 'G'
+    				fuel_type: 'G'
     			}, {
     				account_id: '850042461346',
-    				fuelttype: 'E'
+    				fuel_type: 'E'
     			} ] );
 			} )( done );
 		} );
