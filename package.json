@@ -10,14 +10,15 @@
     "config": "x",
     "config-file": "x",
     "event-stream": "x",
+    "getenv": "^0.3.0",
     "js-yaml": "x",
     "moment-timezone": "x",
-    "require-all": "x",
-    "super-func": "x",
-    "super-iter": "x",
     "mssql": "0.5.4",
     "pg": "3.4.x",
+    "require-all": "x",
     "sql": "0.39.x",
+    "super-func": "x",
+    "super-iter": "x",
     "through": "x",
     "thunkify": "x",
     "useful-copy": "x",
@@ -39,10 +40,12 @@
     "Simon Jefford": "si@ibrokethat.com",
     "Christos Constandinou": "constantology@gmail.com"
   },
-  "license":[ {
-    "type": "MIT",
-    "url": "https://raw.github.com/super-useful/su-apiserver/master/LICENSE"
-  }],
+  "license": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/super-useful/su-apiserver/master/LICENSE"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:super-useful/su-q.git"
@@ -54,5 +57,4 @@
   "engines": {
     "node": "0.11.x"
   }
-
 }
