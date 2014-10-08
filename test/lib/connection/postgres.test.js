@@ -60,4 +60,26 @@ suite( 'suq.connection.postgres', function() {
 			} )( done );
 		} );
 	} );
+
+	suite( 'takes a query requiring a json object, then parses, jsonifies and interpolates it correctly , and returns expected results', function() {
+		test( 'connection/postgres', function( done ) {
+			co( function* () {
+				var db = yield require( '../../../' )( DEFAULTS.dbs );
+
+				var an_object = {
+					s: "string",
+					n: 42,
+					o: { 'foo': 'bar' },
+					a: [1,2,3]
+				};
+
+				var res = yield db.nipple.json_column.query( { an_object: an_object } );
+
+				expect( res.length ).to.equal( 1 );
+				expect( typeof res[0].col1  ).to.equal( "string" );
+				expect( function() { JSON.parse(res[0].col1); }).to.not.throw();
+				expect( JSON.parse(res[0].col1) ).to.deep.equal( an_object );
+			} )( done );
+		} );
+	} );
 } );
