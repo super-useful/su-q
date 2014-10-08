@@ -10,5 +10,8 @@ dbs:
       data_range:
         name: "me.getpremiseranges"
         query: "SELECT * FROM {__name__}({premise_id});"
+      json_column:
+        name: "this_name_value_is_not_important"
+        query: "SELECT '{{an_object}}' AS col1;"
     access:
       read: true
