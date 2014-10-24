@@ -12,7 +12,7 @@
     "event-stream": "x",
     "getenv": "^0.3.0",
     "js-yaml": "x",
-    "moment-timezone": "x",
+    "moment-timezone": "0.2.x",
     "mssql": "0.5.4",
     "pg": "3.4.x",
     "require-all": "x",
