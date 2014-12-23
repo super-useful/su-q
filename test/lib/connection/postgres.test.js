@@ -10,7 +10,7 @@ var DEFAULTS = require( '../../../lib/helpers/defaults' )( path.resolve( 'config
 
 var expect = chai.expect;
 
-suite( 'suq.connection.postgres', function() {
+suite.skip( 'suq.connection.postgres', function() {
 	var db, col;
 
 //	suiteSetup( function( done ) {
@@ -40,7 +40,7 @@ suite( 'suq.connection.postgres', function() {
 
 	suite( 'takes an database collection/table, a query parse function and returns a Proxy wrapper to it', function() {
 		test( 'connection/postgres', function( done ) {
-			co( function* () {
+			co.wrap( function* () {
 				var db = yield require( '../../../' )( DEFAULTS.dbs );
 
 				var res = yield db.nipple.data_range.query( { premise_id : '2286834006' } );
@@ -57,13 +57,15 @@ suite( 'suq.connection.postgres', function() {
     				account_id: '850042461346',
     				fuel_type: 'E'
     			} ] );
-			} )( done );
+
+				done();
+			} )();
 		} );
 	} );
 
 	suite( 'takes a query requiring a json object, then parses, jsonifies and interpolates it correctly , and returns expected results', function() {
 		test( 'connection/postgres', function( done ) {
-			co( function* () {
+			co.wrap( function* () {
 				var db = yield require( '../../../' )( DEFAULTS.dbs );
 
 				var an_object = {
@@ -79,7 +81,9 @@ suite( 'suq.connection.postgres', function() {
 				expect( typeof res[0].col1  ).to.equal( "string" );
 				expect( function() { JSON.parse(res[0].col1); }).to.not.throw();
 				expect( JSON.parse(res[0].col1) ).to.deep.equal( an_object );
-			} )( done );
+
+				done();
+			} )();
 		} );
 	} );
 } );

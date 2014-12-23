@@ -11,7 +11,7 @@ var expect = chai.expect;
 
 suite( 'suq', function() {
 	test( 'takes an Array of database connection configurations and returns a Proxy for each available database as a getter property', function( done ) {
-		co( function* () {
+		co.wrap( function* () {
 			var dbs = yield suq( CONFIG.dbs );
 
 			var empty = require( '../lib/proxy/empty' );
@@ -28,6 +28,8 @@ suite( 'suq', function() {
 
 			expect( dbs.simonisawesome.server ).to.be.undefined;
 			expect( dbs.simonisawesome.port ).to.be.undefined;
-		} )( done );
+
+			done();
+		} )();
 	} );
 } );
