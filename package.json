@@ -1,6 +1,6 @@
 {
   "name": "su-q",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "super useful wrapper to database querying stuff and the like",
   "dependencies": {
     "JSONStream": "x",
