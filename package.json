@@ -15,6 +15,7 @@
     "moment-timezone": "0.2.x",
     "mssql": "0.5.4",
     "pg": "4.1.x",
+    "pg-query-stream": "0.7.x",
     "require-all": "x",
     "sql": "0.39.x",
     "super-func": "x",
@@ -52,8 +53,8 @@
     "url": "git@github.com:super-useful/su-q.git"
   },
   "scripts": {
-    "test": "node --harmony --harmony_typeof ./node_modules/mocha/bin/_mocha --colors --recursive --ui tdd --reporter spec ./test --NODE_ENV=test",
-    "example": "export DB_PASSWORD='PASSWORD_YOU_SHOULD_KNOW' && node --harmony --harmony_typeof example.js"
+    "test": "node --harmony ./node_modules/mocha/bin/_mocha --colors --recursive --ui tdd --reporter spec ./test --NODE_ENV=test",
+    "example": "export DB_PASSWORD='PASSWORD_YOU_SHOULD_KNOW' && node --harmony example.js"
   },
   "engines": {
     "node": "0.11.x"
